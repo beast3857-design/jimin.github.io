@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 - 나의 블로그</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo"><a href="/">나의 블로그</a></h1>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="다크/라이트 모드 전환"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <article class="container post-container">
+        <!-- 게시글 메타 정보 -->
+        <div id="post-meta" class="post-meta">
+          <!-- JavaScript로 동적 생성 -->
+        </div>
+
+        <!-- 게시글 본문 -->
+        <div id="post-content" class="post-content">
+          <div class="loading">게시글을 불러오는 중...</div>
+        </div>
+
+        <!-- 뒤로 가기 버튼 -->
+        <div class="post-navigation">
+          <a href="/" class="btn-back">← 목록으로 돌아가기</a>
+        </div>
+
+        <!-- Giscus 댓글 -->
+        <div id="giscus-container" class="giscus-container">
+          <!-- Giscus 스크립트가 동적으로 로드됩니다 -->
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 나의 블로그. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 마크다운 파싱 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    <!-- 코드 하이라이팅 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script src="js/theme.js"></script>
+    <script src="js/post-loader.js"></script>
+  </body>
+</html>
